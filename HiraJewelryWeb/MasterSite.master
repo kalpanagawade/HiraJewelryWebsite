@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterSite.master.cs" Inherits="HiraJewelryWeb.MasterSite" %>
+
+<%--<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterSite.master.cs" Inherits="MasterSite" %>--%>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Hira Jewelry</title>
+    <style>
+        .header {
+            background: #d6336c;
+            padding: 12px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logout-btn {
+            background: #fff;
+            color: #d6336c;
+            padding: 5px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logout-btn:hover {
+            background: #ffe6ee;
+        }
+
+        .container {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- NAV / HEADER -->
+        <div class="header">
+            <div>
+                <strong>Hira Jewelry Dashboard</strong>
+            </div>
+            <div>
+                 <asp:HyperLink ID="hlProducts" runat="server" NavigateUrl="~/Products.aspx" CssClass="logout-btn">Products</asp:HyperLink>
+                <asp:HyperLink ID="hlCart" runat="server" NavigateUrl="~/Cart.aspx" CssClass="logout-btn">Cart</asp:HyperLink>
+                Welcome <asp:Label ID="lblUser" runat="server" /> |
+                <asp:LinkButton ID="btnLogout" CssClass="logout-btn" runat="server" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+            </div>
+        </div>
+
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+</body>
+</html>

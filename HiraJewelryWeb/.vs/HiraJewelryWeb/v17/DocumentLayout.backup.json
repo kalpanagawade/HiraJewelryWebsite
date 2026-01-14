@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HeraJweller13012026\\HiraJewelryWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\admindefault.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:admindefault.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\admindefault.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:admindefault.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\adminproducts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:adminproducts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\adminproducts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:adminproducts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\products.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:products.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\mastersite.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:mastersite.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\mastersite.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:mastersite.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\cart.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:cart.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\auth.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:auth.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\auth.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:auth.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|d:\\herajweller13012026\\hirajewelryweb\\auth.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B5BC26EB-06EB-4902-A2DC-E719A5E183BB}|HiraJewelryWeb.csproj|solutionrelative:auth.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminProducts.aspx.cs",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\AdminProducts.aspx.cs",
+              "RelativeDocumentMoniker": "AdminProducts.aspx.cs",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\AdminProducts.aspx.cs",
+              "RelativeToolTip": "AdminProducts.aspx.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T19:38:25.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminProducts.aspx",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\AdminProducts.aspx",
+              "RelativeDocumentMoniker": "AdminProducts.aspx",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\AdminProducts.aspx",
+              "RelativeToolTip": "AdminProducts.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-13T19:37:29.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Cart.aspx.cs",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Cart.aspx.cs",
+              "RelativeDocumentMoniker": "Cart.aspx.cs",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Cart.aspx.cs",
+              "RelativeToolTip": "Cart.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T19:30:16.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Cart.aspx",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Cart.aspx",
+              "RelativeDocumentMoniker": "Cart.aspx",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Cart.aspx",
+              "RelativeToolTip": "Cart.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-13T19:29:30.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Products.aspx.cs",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Products.aspx.cs",
+              "RelativeDocumentMoniker": "Products.aspx.cs",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Products.aspx.cs",
+              "RelativeToolTip": "Products.aspx.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T19:16:13.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Products.aspx",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Products.aspx",
+              "RelativeDocumentMoniker": "Products.aspx",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Products.aspx",
+              "RelativeToolTip": "Products.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-13T19:14:58.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Auth.aspx.cs",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Auth.aspx.cs",
+              "RelativeDocumentMoniker": "Auth.aspx.cs",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Auth.aspx.cs",
+              "RelativeToolTip": "Auth.aspx.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAMwDUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T18:50:51.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminDefault.aspx.cs",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\AdminDefault.aspx.cs",
+              "RelativeDocumentMoniker": "AdminDefault.aspx.cs",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\AdminDefault.aspx.cs",
+              "RelativeToolTip": "AdminDefault.aspx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T18:49:00.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminDefault.aspx",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\AdminDefault.aspx",
+              "RelativeDocumentMoniker": "AdminDefault.aspx",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\AdminDefault.aspx",
+              "RelativeToolTip": "AdminDefault.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-13T18:44:41.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MasterSite.master.cs",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\MasterSite.master.cs",
+              "RelativeDocumentMoniker": "MasterSite.master.cs",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\MasterSite.master.cs",
+              "RelativeToolTip": "MasterSite.master.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T18:28:50.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MasterSite.master",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\MasterSite.master",
+              "RelativeDocumentMoniker": "MasterSite.master",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\MasterSite.master",
+              "RelativeToolTip": "MasterSite.master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-13T18:27:52.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Auth.aspx",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Auth.aspx",
+              "RelativeDocumentMoniker": "Auth.aspx",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Auth.aspx",
+              "RelativeToolTip": "Auth.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-13T18:24:19.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "Default.aspx.cs",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Default.aspx.cs",
+              "RelativeToolTip": "Default.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T18:19:39.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Default.aspx",
+              "RelativeDocumentMoniker": "Default.aspx",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\Default.aspx",
+              "RelativeToolTip": "Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-13T18:16:29.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "auth.css",
+              "DocumentMoniker": "D:\\HeraJweller13012026\\HiraJewelryWeb\\auth.css",
+              "RelativeDocumentMoniker": "auth.css",
+              "ToolTip": "D:\\HeraJweller13012026\\HiraJewelryWeb\\auth.css",
+              "RelativeToolTip": "auth.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-13T17:56:26.656Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
