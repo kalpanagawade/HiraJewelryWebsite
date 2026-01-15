@@ -15,13 +15,31 @@ namespace HiraJewelryWeb
     {
 
         /// <summary>
-        /// pnlForm control.
+        /// txtSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlForm;
+        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearch;
+
+        /// <summary>
+        /// btnReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReset;
 
         /// <summary>
         /// hfProductID control.
@@ -78,13 +96,13 @@ namespace HiraJewelryWeb
         protected global::System.Web.UI.WebControls.TextBox txtStock;
 
         /// <summary>
-        /// txtImageUrl control.
+        /// fuImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtImageUrl;
+        protected global::System.Web.UI.WebControls.FileUpload fuImage;
 
         /// <summary>
         /// btnSave control.
