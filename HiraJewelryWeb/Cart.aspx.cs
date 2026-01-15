@@ -38,7 +38,17 @@ namespace HiraJewelryWeb
                 // Get UserID
                 SqlCommand cmdUser = new SqlCommand("SELECT UserID FROM Users WHERE Email=@Email", con);
                 cmdUser.Parameters.AddWithValue("@Email", userEmail);
-                int userId = Convert.ToInt32(cmdUser.ExecuteScalar());
+                object userObj = cmdUser.ExecuteScalar();
+
+                if (userObj == null)
+                {
+                    rptCart.DataSource = null;
+                    rptCart.DataBind();
+                    lblEmpty.Visible = true;
+                    return;
+                }
+
+                int userId = Convert.ToInt32(userObj);
 
                 // Get CartID
                 SqlCommand cmdCart = new SqlCommand("SELECT CartID FROM CartMaster WHERE UserID=@UserID", con);
@@ -47,16 +57,17 @@ namespace HiraJewelryWeb
 
                 if (cartObj == null)
                 {
-                    gvCart.DataSource = null;
-                    gvCart.DataBind();
+                    rptCart.DataSource = null;
+                    rptCart.DataBind();
+                    lblEmpty.Visible = true;
                     return;
                 }
 
                 int cartId = Convert.ToInt32(cartObj);
 
-                // Get cart details
+                // Get Cart Details
                 SqlCommand cmdDetails = new SqlCommand(@"
-                SELECT p.ProductName, p.Price, cd.Quantity, (p.Price*cd.Quantity) AS Total
+                SELECT p.ProductName, p.Price, cd.Quantity, (p.Price * cd.Quantity) AS Total, p.ImageUrl
                 FROM CartDetails cd
                 INNER JOIN Products p ON cd.ProductID = p.ProductID
                 WHERE cd.CartID=@CartID", con);
@@ -67,8 +78,17 @@ namespace HiraJewelryWeb
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                gvCart.DataSource = dt;
-                gvCart.DataBind();
+                if (dt.Rows.Count > 0)
+                {
+                    rptCart.DataSource = dt;
+                    rptCart.DataBind();
+                }
+                else
+                {
+                    rptCart.DataSource = null;
+                    rptCart.DataBind();
+                    lblEmpty.Visible = true;
+                }
             }
         }
     }
