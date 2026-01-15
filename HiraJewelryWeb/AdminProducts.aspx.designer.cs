@@ -30,7 +30,7 @@ namespace HiraJewelryWeb
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.LinkButton btnSearch;
 
         /// <summary>
         /// btnReset control.
@@ -39,7 +39,7 @@ namespace HiraJewelryWeb
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReset;
+        protected global::System.Web.UI.WebControls.LinkButton btnReset;
 
         /// <summary>
         /// hfProductID control.
