@@ -15,7 +15,7 @@
             display: flex;
             align-items: center;
             padding: 15px;
-            margin-bottom: 15px;
+            margin: 15px;
             border-radius: 10px;
             border: 1px solid #ddd;
             background: #fff;
@@ -64,6 +64,7 @@
 
     <div class="cart-header">Your Cart</div>
 
+    <div style="display:flex;">
     <asp:Repeater ID="rptCart" runat="server">
         <ItemTemplate>
             <div class="product-card">
@@ -78,7 +79,7 @@
             </div>
         </ItemTemplate>
     </asp:Repeater>
-
+    </div>
     <asp:Label ID="lblEmpty" runat="server" Visible="false" CssClass="empty-cart" Text="Your cart is empty!"></asp:Label>
 
 </asp:Content>
