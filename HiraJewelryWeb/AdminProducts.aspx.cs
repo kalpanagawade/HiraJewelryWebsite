@@ -70,7 +70,7 @@ namespace HiraJewelryWeb
             if (fuImage.HasFile)
             {
                 string fileName = Guid.NewGuid() + Path.GetExtension(fuImage.FileName);
-                imagePath = "~/Images/" + fileName;
+                imagePath = "Images/" + fileName;
                 fuImage.SaveAs(Server.MapPath(imagePath));
             }
 
