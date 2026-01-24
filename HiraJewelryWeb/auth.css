@@ -1,8 +1,9 @@
 ﻿body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffdd00, #ffffff);
-    height: 75vh;
+    margin: -90px 1px 50px 1px;
+    font-family: UI-SANS-SERIF, cursive;
+    /*background: linear-gradient(135deg, #ffdd00, #ffffff);*/
+    background: linear-gradient(643deg, #a99200, #bca3e3);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

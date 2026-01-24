@@ -20,12 +20,21 @@ namespace HiraJewelryWeb
             }
         }
 
-        private void BindProducts()
+        private void BindProducts(string search = "")
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             using (SqlConnection con = new SqlConnection(cs))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Products", con);
+                string query = "SELECT * FROM Products";
+
+                if (!string.IsNullOrEmpty(search))
+                    query += " WHERE ProductName LIKE @search";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                if (!string.IsNullOrEmpty(search))
+                    cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 rptProducts.DataSource = dr;
@@ -33,6 +42,16 @@ namespace HiraJewelryWeb
             }
         }
 
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            BindProducts();
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindProducts(txtSearch.Text.Trim());
+        }
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
             int productId = Convert.ToInt32(((System.Web.UI.WebControls.Button)sender).CommandArgument);
