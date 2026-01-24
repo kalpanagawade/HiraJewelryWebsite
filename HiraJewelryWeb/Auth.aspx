@@ -12,7 +12,7 @@
 <form id="form1" runat="server">
 <div class="container">
 
-  <div class="flip-card" id="authCard">
+  <div class="flip-card" id="authCard" style="padding: 0px 0px 54px 20px !important; background-color: lightpink;">
 
     <!-- LOGIN PANEL -->
     <div class="flip-face front">
