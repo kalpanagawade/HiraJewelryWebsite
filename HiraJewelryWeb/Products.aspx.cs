@@ -16,31 +16,124 @@ namespace HiraJewelryWeb
         {
             if (!IsPostBack)
             {
+                BindCategories();
                 BindProducts();
             }
         }
 
-        private void BindProducts(string search = "")
+        protected void btnApplyFilter_Click(object sender, EventArgs e)
+{
+    decimal? minPrice = null;
+    decimal? maxPrice = null;
+
+    if (!string.IsNullOrEmpty(txtMinPrice.Text))
+        minPrice = Convert.ToDecimal(txtMinPrice.Text);
+
+    if (!string.IsNullOrEmpty(txtMaxPrice.Text))
+        maxPrice = Convert.ToDecimal(txtMaxPrice.Text);
+
+    BindProducts(
+        txtSearch.Text.Trim(),
+        ddlCategory.SelectedValue,
+        ddlSortPrice.SelectedValue,
+        minPrice,
+        maxPrice
+    );
+}
+
+
+
+        //private void BindProducts(string search = "")
+        //{
+        //    string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+        //    using (SqlConnection con = new SqlConnection(cs))
+        //    {
+        //        string query = "SELECT * FROM Products";
+
+        //        if (!string.IsNullOrEmpty(search))
+        //            query += " WHERE ProductName LIKE @search";
+
+        //        SqlCommand cmd = new SqlCommand(query, con);
+
+        //        if (!string.IsNullOrEmpty(search))
+        //            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
+        //        con.Open();
+        //        SqlDataReader dr = cmd.ExecuteReader();
+        //        rptProducts.DataSource = dr;
+        //        rptProducts.DataBind();
+        //    }
+        //}
+
+
+        private void BindProducts(
+     string search = "",
+     string category = "",
+     string sort = "",
+     decimal? minPrice = null,
+     decimal? maxPrice = null)
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+
             using (SqlConnection con = new SqlConnection(cs))
             {
-                string query = "SELECT * FROM Products";
+                string query = "SELECT * FROM Products WHERE 1=1";
 
                 if (!string.IsNullOrEmpty(search))
-                    query += " WHERE ProductName LIKE @search";
+                    query += " AND ProductName LIKE @search";
+
+                if (!string.IsNullOrEmpty(category))
+                    query += " AND Category = @Category";
+
+                if (minPrice.HasValue)
+                    query += " AND Price >= @MinPrice";
+
+                if (maxPrice.HasValue)
+                    query += " AND Price <= @MaxPrice";
+
+                if (!string.IsNullOrEmpty(sort))
+                    query += " ORDER BY Price " + sort;
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
                 if (!string.IsNullOrEmpty(search))
                     cmd.Parameters.AddWithValue("@search", "%" + search + "%");
 
+                if (!string.IsNullOrEmpty(category))
+                    cmd.Parameters.AddWithValue("@Category", category);
+
+                if (minPrice.HasValue)
+                    cmd.Parameters.AddWithValue("@MinPrice", minPrice);
+
+                if (maxPrice.HasValue)
+                    cmd.Parameters.AddWithValue("@MaxPrice", maxPrice);
+
                 con.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                rptProducts.DataSource = dr;
+                rptProducts.DataSource = cmd.ExecuteReader();
                 rptProducts.DataBind();
             }
         }
+
+
+        private void BindCategories()
+        {
+            string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT DISTINCT Category FROM Products ORDER BY Category", con);
+
+                con.Open();
+                ddlCategory.DataSource = cmd.ExecuteReader();
+                ddlCategory.DataTextField = "Category";
+                ddlCategory.DataValueField = "Category";
+                ddlCategory.DataBind();
+            }
+
+            ddlCategory.Items.Insert(0, new ListItem("All Categories", ""));
+        }
+
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
@@ -48,9 +141,14 @@ namespace HiraJewelryWeb
             BindProducts();
         }
 
+        //protected void btnSearch_Click(object sender, EventArgs e)
+        //{
+        //    BindProducts(txtSearch.Text.Trim());
+        //}
+
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            BindProducts(txtSearch.Text.Trim());
+            btnApplyFilter_Click(sender, e);
         }
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
