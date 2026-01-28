@@ -26,6 +26,29 @@ namespace HiraJewelryWeb
             if (!IsPostBack)
             {
                 BindProducts();
+                BindCategory();
+            }
+        }
+
+        private void BindCategory()
+        {
+
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                using (SqlCommand cmd = new SqlCommand(
+                    "SELECT CategoryID, CategoryName FROM Category WHERE IsActive = 1 ORDER BY CategoryName", con))
+                {
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        ddlCategory.DataSource = dt;
+                        ddlCategory.DataTextField = "CategoryName";
+                        ddlCategory.DataValueField = "CategoryID";
+                        ddlCategory.DataBind();
+                    }
+                }
             }
         }
 
@@ -92,7 +115,7 @@ namespace HiraJewelryWeb
                 }
 
                 cmd.Parameters.AddWithValue("@n", txtProductName.Text.Trim());
-                cmd.Parameters.AddWithValue("@c", txtCategory.Text.Trim());
+                cmd.Parameters.AddWithValue("@c", ddlCategory.SelectedValue);
                 cmd.Parameters.AddWithValue("@d", txtDescription.Text.Trim());
                 cmd.Parameters.AddWithValue("@p", Convert.ToDecimal(txtPrice.Text.Trim()));
                 cmd.Parameters.AddWithValue("@s", Convert.ToInt32(txtStock.Text.Trim()));
@@ -123,7 +146,7 @@ namespace HiraJewelryWeb
                 {
                     hfProductID.Value = dr["ProductID"].ToString();
                     txtProductName.Text = dr["ProductName"].ToString();
-                    txtCategory.Text = dr["Category"].ToString();
+                    ddlCategory.SelectedValue = dr["Category"].ToString();
                     txtDescription.Text = dr["Description"].ToString();
                     txtPrice.Text = dr["Price"].ToString();
                     txtStock.Text = dr["Stock"].ToString();
@@ -155,7 +178,8 @@ namespace HiraJewelryWeb
         {
             hfProductID.Value = "";
             txtProductName.Text = "";
-            txtCategory.Text = "";
+            ddlCategory.ClearSelection();
+            ddlCategory.SelectedIndex = 0;
             txtDescription.Text = "";
             txtPrice.Text = "";
             txtStock.Text = "";
