@@ -77,7 +77,15 @@
             </div>
 
             <div class="col-md-4">
-                <asp:TextBox ID="txtCategory" runat="server" CssClass="form-control" Placeholder="Category" />
+                <%--<asp:TextBox ID="txtCategory" runat="server" CssClass="form-control" Placeholder="Category" />--%>
+                <asp:DropDownList 
+    ID="ddlCategory" 
+    runat="server" 
+    CssClass="form-control"
+    AppendDataBoundItems="true">
+    <asp:ListItem Text="-- Select Category --" Value="" />
+</asp:DropDownList>
+
             </div>
 
             <div class="col-md-4">
