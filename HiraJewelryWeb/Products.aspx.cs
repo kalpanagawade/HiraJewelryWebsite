@@ -41,6 +41,21 @@ namespace HiraJewelryWeb
     );
 }
 
+        protected void btnClearFilter_Click(object sender, EventArgs e)
+        {
+            // Clear dropdowns
+            ddlSortPrice.ClearSelection();
+            ddlSortPrice.SelectedIndex = 0;
+
+            ddlCategory.ClearSelection();
+            ddlCategory.SelectedIndex = 0;
+
+            // Clear textboxes
+            txtMinPrice.Text = "";
+            txtMaxPrice.Text = "";
+
+            BindProducts();
+        }
 
 
         //private void BindProducts(string search = "")
@@ -122,12 +137,12 @@ namespace HiraJewelryWeb
             using (SqlConnection con = new SqlConnection(cs))
             {
                 SqlCommand cmd = new SqlCommand(
-                    "SELECT DISTINCT Category FROM Products ORDER BY Category", con);
+                    "Select CategoryName from Category ORDER BY CategoryName", con);
 
                 con.Open();
                 ddlCategory.DataSource = cmd.ExecuteReader();
-                ddlCategory.DataTextField = "Category";
-                ddlCategory.DataValueField = "Category";
+                ddlCategory.DataTextField = "CategoryName";
+                ddlCategory.DataValueField = "CategoryName";
                 ddlCategory.DataBind();
             }
 

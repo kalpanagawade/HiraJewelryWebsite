@@ -30,20 +30,17 @@
 </div>
 
 <!-- FILTER PANEL -->
-<div id="filterPanel" class="card p-3 mb-4" style="display:none; max-width:100%;">
+<div id="filterPanel" class="card p-3 mb-4" style="background-color: aliceblue;display:none; max-width:100%;">
     <h5>Filter by Price</h5>
-
-    <!-- SORT -->
-    <div class="mb-2">
-        <asp:DropDownList ID="ddlSortPrice" runat="server" CssClass="form-select">
+          <!-- PRICE RANGE -->
+    <div class="row mb-2">
+        <div class="col">
+                    <asp:DropDownList ID="ddlSortPrice" runat="server" CssClass="form-select">
             <asp:ListItem Text="-- Select --" Value="" />
             <asp:ListItem Text="Low to High" Value="ASC" />
             <asp:ListItem Text="High to Low" Value="DESC" />
         </asp:DropDownList>
-    </div>
-
-    <!-- PRICE RANGE -->
-    <div class="row mb-2">
+        </div>
         <div class="col">
             <asp:TextBox ID="txtMinPrice" runat="server"
                 CssClass="form-control"
@@ -57,16 +54,30 @@
     </div>
 
     <div class="mb-2">
-    <label class="form-label">Category</label>
+    <h5>Filter by Category</h5>
+    <%--<label class="form-label">Category</label>--%>
     <asp:DropDownList ID="ddlCategory" runat="server" CssClass="form-select">
         <asp:ListItem Text="All Categories" Value="" />
     </asp:DropDownList>
 </div>
 
-    <asp:Button ID="btnApplyFilter" runat="server"
-        Text="Apply Filter"
-        CssClass="btn btn-primary w-100"
-        OnClick="btnApplyFilter_Click" />
+    <div class="row mb-2">
+        <div class="col">
+            <asp:Button ID="btnApplyFilter" runat="server"
+    Text="Apply Filter"
+    CssClass="btn btn-primary w-100"
+    OnClick="btnApplyFilter_Click" />
+        </div>
+        <div class="col">
+                <asp:Button 
+    ID="btnClearFilter" 
+    runat="server"
+    Text="Clear Filter"
+    CssClass="btn btn-secondary w-100 mb-2"
+    OnClick="btnClearFilter_Click" />
+        </div>
+    </div>
+
 </div>
 
 
