@@ -106,6 +106,7 @@
     <Content Include="Auth.aspx" />
     <Content Include="auth.css" />
     <Content Include="Cart.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -128,6 +129,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="ProductDetails.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -237,6 +239,13 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,6 +276,13 @@
     </Compile>
     <Compile Include="MasterSite.master.designer.cs">
       <DependentUpon>MasterSite.master</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>

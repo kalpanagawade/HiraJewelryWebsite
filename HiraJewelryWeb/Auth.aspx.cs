@@ -113,7 +113,7 @@ namespace HiraJewelryWeb
                 }
 
                 // Insert new user
-                SqlCommand cmd = new SqlCommand("INSERT INTO Users (FullName, Email, Password, Mobile) VALUES (@FullName, @Email, @Password, @Mobile)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO Users (FullName, Email, Password, Mobile,Role) VALUES (@FullName, @Email, @Password, @Mobile,'User')", con);
 
                 cmd.Parameters.AddWithValue("@FullName", txtFullName.Text.Trim());
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
