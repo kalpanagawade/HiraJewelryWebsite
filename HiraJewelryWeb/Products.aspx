@@ -6,6 +6,102 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
+    <style>
+
+        .product-card {
+    width: 220px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    background: #fff;
+}
+
+.product-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+.product-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Blur background */
+#blurOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 999;
+}
+
+/* Modal */
+#productModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90%;
+    background: #fff;
+    border-radius: 18px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* iframe */
+#productFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 18px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 10;
+    color:red;
+}
+.close-btn:hover{
+    color:white;
+    background-color:red;
+}
+/* Product card */
+.product-card {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+.product-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+
+    </style>
+
     <h2>Our Jewelry Collection</h2>
         <!-- SEARCH BOX -->
     <div class="input-group mb-4" style="max-width:100%;">
@@ -19,6 +115,7 @@
     <i class="fa-solid fa-rotate-left"></i>
 </asp:LinkButton>
     </div>
+
 
     <!-- FILTER BUTTON -->
 <div class="mb-3">
@@ -81,7 +178,7 @@
 </div>
 
 
-    <asp:Repeater ID="rptProducts" runat="server">
+    <%--<asp:Repeater ID="rptProducts" runat="server">
         <ItemTemplate>
             <div style="border:1px solid #ddd; padding:15px; margin:10px; width:220px; display:inline-block; vertical-align:top; text-align:center; border-radius:8px;">
                 <img src='<%# Eval("ImageUrl") %>' style="width:180px; height:180px; border-radius:8px;" />
@@ -91,13 +188,55 @@
                 <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" CommandArgument='<%# Eval("ProductID") %>' OnClick="btnAddToCart_Click" CssClass="btn btn-primary" />
             </div>
         </ItemTemplate>
-    </asp:Repeater>
+    </asp:Repeater>--%>
+   <asp:Repeater ID="rptProducts" runat="server">
+    <ItemTemplate>
+        <div class="product-card">
+            <img src='<%# Eval("ImageUrl") %>'
+                 class="product-img"
+                 onclick="openProductModal('<%# Eval("ProductID") %>')" />
+
+            <h4><%# Eval("ProductName") %></h4>
+            <p>₹ <%# Eval("Price") %></p>
+            <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" CommandArgument='<%# Eval("ProductID") %>' OnClick="btnAddToCart_Click" CssClass="btn btn-primary" />
+        </div>
+    </ItemTemplate>
+</asp:Repeater>
+
+    <!-- Blur Overlay -->
+<div id="blurOverlay"></div>
+
+<!-- Product Modal -->
+<div id="productModal">
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <iframe id="productFrame"></iframe>
+</div>
+
 
     <script>
     function toggleFilter() {
         var panel = document.getElementById("filterPanel");
         panel.style.display = panel.style.display === "none" ? "block" : "none";
-    }
+        }
+
+        function openProduct(productId) {
+            window.location.href = "ProductDetails.aspx?pid=" + productId;
+        }
+
+        function openProductModal(productId) {
+            document.getElementById("blurOverlay").style.display = "block";
+            document.getElementById("productModal").style.display = "block";
+
+            document.getElementById("productFrame").src =
+                "ProductDetails.aspx?pid=" + productId;
+        }
+
+        function closeModal() {
+            document.getElementById("blurOverlay").style.display = "none";
+            document.getElementById("productModal").style.display = "none";
+            document.getElementById("productFrame").src = "";
+        }
     </script>
 </asp:Content>
 

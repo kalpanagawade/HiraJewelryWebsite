@@ -115,7 +115,7 @@ namespace HiraJewelryWeb
                 }
 
                 cmd.Parameters.AddWithValue("@n", txtProductName.Text.Trim());
-                cmd.Parameters.AddWithValue("@c", ddlCategory.SelectedValue);
+                cmd.Parameters.AddWithValue("@c", ddlCategory.SelectedItem.Text);
                 cmd.Parameters.AddWithValue("@d", txtDescription.Text.Trim());
                 cmd.Parameters.AddWithValue("@p", Convert.ToDecimal(txtPrice.Text.Trim()));
                 cmd.Parameters.AddWithValue("@s", Convert.ToInt32(txtStock.Text.Trim()));
