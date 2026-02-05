@@ -28,17 +28,28 @@
             border-radius: 10px;
         }
 
-        .left { width: 65%; }
-        .right { width: 35%; }
+        .left { width: 60%; }
+        .right { width: 40%; }
 
         h3 {
             margin-top: 20px;
         }
 
-        input, select {
+        .width88{
+            width:88%;
+        }
+
+        input {
+            /*width: 100%;*/
+            padding: 10px;
+            margin-top: 4px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        select {
             width: 100%;
             padding: 10px;
-            margin-top: 8px;
+            margin-top: 4px;
             border-radius: 6px;
             border: 1px solid #ccc;
         }
@@ -93,7 +104,7 @@
     <div class="left">
 
         <h3>Contact</h3>
-        <asp:TextBox ID="txtEmail" runat="server"
+        <asp:TextBox ID="txtEmail" runat="server" style="width:50%"
             placeholder="Email or mobile phone number" />
         <asp:CheckBox ID="chkOffers" runat="server"
             Text="Email me with news and offers" />
@@ -107,23 +118,29 @@
 
         <div class="row">
             <div>
-                <asp:TextBox ID="txtFirstName" runat="server" placeholder="First name" />
+                <asp:TextBox ID="txtFirstName" runat="server" placeholder="First name" class="width88"/>
             </div>
             <div>
-                <asp:TextBox ID="txtLastName" runat="server" placeholder="Last name" />
+                <asp:TextBox ID="txtLastName" runat="server" placeholder="Last name" class="width88" />
             </div>
         </div>
 
-        <asp:TextBox ID="txtAddress" runat="server" placeholder="Address" />
-        <asp:TextBox ID="txtApartment" runat="server"
+        <div class="row">
+        <div>
+            <asp:TextBox ID="txtAddress" runat="server" placeholder="Address" class="width88" />
+        </div>
+        <div>
+        <asp:TextBox ID="txtApartment" runat="server" class="width88"
             placeholder="Apartment, suite, etc. (optional)" />
+         </div>
+        </div>
 
         <div class="row">
             <div>
-                <asp:TextBox ID="txtCity" runat="server" placeholder="City" />
+                <asp:TextBox ID="txtCity" runat="server" placeholder="City" class="width88"/>
             </div>
             <div>
-                <asp:DropDownList ID="ddlState" runat="server">
+                <asp:DropDownList ID="ddlState" runat="server" class="width88">
                     <asp:ListItem>Maharashtra</asp:ListItem>
                 </asp:DropDownList>
             </div>
@@ -131,10 +148,10 @@
 
         <div class="row">
             <div>
-                <asp:TextBox ID="txtPin" runat="server" placeholder="PIN code" />
+                <asp:TextBox ID="txtPin" runat="server" placeholder="PIN code" class="width88"/>
             </div>
             <div>
-                <asp:TextBox ID="txtPhone" runat="server" placeholder="Phone" />
+                <asp:TextBox ID="txtPhone" runat="server" placeholder="Phone" class="width88"/>
             </div>
         </div>
 
@@ -146,32 +163,33 @@
             Enter your shipping address to view available shipping methods.
         </p>
 
-        <h3>Payment</h3>
-        <p class="small">All transactions are secure and encrypted.</p>
-
-        <div class="payment-box">
-            <asp:RadioButton ID="rbRazorpay" runat="server"
-                GroupName="pay" Checked="true"
-                Text="Razorpay Secure (UPI, Cards, Wallets)" />
-        </div>
-
-        <div class="payment-box">
-            <asp:RadioButton ID="rbEasebuzz" runat="server"
-                GroupName="pay"
-                Text="Easebuzz (Cards / UPI)" />
-        </div>
-
-        <div class="payment-box">
-            <asp:RadioButton ID="rbCOD" runat="server"
-                GroupName="pay"
-                Text="Cash on Delivery (COD)" />
-        </div>
+      
 
     </div>
 
     <!-- RIGHT SIDE -->
     <div class="right">
 
+          <h3>Payment</h3>
+  <p class="small">All transactions are secure and encrypted.</p>
+
+  <div class="payment-box">
+      <asp:RadioButton ID="rbRazorpay" runat="server" style="display:flex;"
+          GroupName="pay" Checked="true"
+          Text="Razorpay Secure (UPI, Cards, Wallets)" />
+  </div>
+
+  <div class="payment-box">
+      <asp:RadioButton ID="rbEasebuzz" runat="server" style="display:flex;"
+          GroupName="pay"
+          Text="Easebuzz (Cards / UPI)" />
+  </div>
+
+  <div class="payment-box">
+      <asp:RadioButton ID="rbCOD" runat="server" style="display:flex;"
+          GroupName="pay"
+          Text="Cash on Delivery (COD)" />
+  </div>
         <h3>Order summary</h3>
 
         <div class="summary-row">
