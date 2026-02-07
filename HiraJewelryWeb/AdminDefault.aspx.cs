@@ -26,6 +26,10 @@ namespace HiraJewelryWeb
         {
             Response.Redirect("~/AdminProducts.aspx");
         }
+        protected void btnManageOrders_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminOrders.aspx");
+        }
 
     }
 }

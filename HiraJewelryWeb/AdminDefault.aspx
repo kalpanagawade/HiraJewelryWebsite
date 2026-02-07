@@ -34,9 +34,13 @@
 
             <!-- Future Cards (Enable later) -->
             <div class="col-md-4 mb-3">
-                <div class="card text-center shadow-sm p-3 bg-light">
+                <div class="card text-center shadow-sm p-3">
                     <h6 class="mb-2">Orders</h6>
-                    <p class="text-muted small">(Coming Soon)</p>
+                    <p class="text-muted small">View & Manage Orders</p>
+                    <asp:Button ID="btnManageOrders" runat="server"
+                        Text="Manage Orders"
+                        CssClass="btn btn-success btn-sm w-100"
+                        OnClick="btnManageOrders_Click" />
                 </div>
             </div>
 

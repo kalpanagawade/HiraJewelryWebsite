@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"
     CodeBehind="ProductDetails.aspx.cs"
-    Inherits="YourProject.ProductDetails" %>
+    Inherits="HiraJewelryWeb.ProductDetails" %>
 
 <!DOCTYPE html>
 <html>

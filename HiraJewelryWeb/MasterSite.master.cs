@@ -12,13 +12,22 @@ namespace HiraJewelryWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             // CHECK LOGIN SESSION
+            //if (Session["UserEmail"] == null)
+            //{
+            //    Response.Redirect("Auth.aspx");  // redirect if not logged in
+            //}
+            //else
+            //{
+            //    lblUser.Text = Session["UserEmail"].ToString();
+            //}
             if (Session["UserEmail"] == null)
             {
-                Response.Redirect("Auth.aspx");  // redirect if not logged in
+                hlOrder.Visible = false;   // hide Order link if not logged in
             }
             else
             {
                 lblUser.Text = Session["UserEmail"].ToString();
+                hlOrder.Visible = true;
             }
         }
 

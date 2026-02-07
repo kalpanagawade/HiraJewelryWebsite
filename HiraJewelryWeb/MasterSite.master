@@ -45,6 +45,13 @@
             <div>
                  <asp:HyperLink ID="hlProducts" runat="server" NavigateUrl="~/Products.aspx" CssClass="logout-btn">Products</asp:HyperLink>
                 <asp:HyperLink ID="hlCart" runat="server" NavigateUrl="~/Cart.aspx" CssClass="logout-btn">Cart</asp:HyperLink>
+                <asp:HyperLink ID="hlOrder" 
+    runat="server" 
+    NavigateUrl="~/Order.aspx"
+    CssClass="logout-btn">
+    Order
+</asp:HyperLink>
+
                 Welcome <asp:Label ID="lblUser" runat="server" /> |
                 <asp:LinkButton ID="btnLogout" CssClass="logout-btn" runat="server" OnClick="btnLogout_Click">Logout</asp:LinkButton>
             </div>
