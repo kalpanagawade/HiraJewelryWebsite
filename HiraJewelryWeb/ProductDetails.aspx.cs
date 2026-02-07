@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace YourProject
+namespace HiraJewelryWeb
 {
     public partial class ProductDetails : System.Web.UI.Page
     {

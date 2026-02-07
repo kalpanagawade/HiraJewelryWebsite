@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace YourProject
+namespace HiraJewelryWeb
 {
 
 
