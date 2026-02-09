@@ -7,6 +7,14 @@
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <%--<link href="Content/site.css" rel="stylesheet" />--%>
+
+
     <div class="container mt-4">
         <h3 class="mb-3">My Orders</h3>
 
@@ -33,14 +41,14 @@
                             </span>
                         </div>
 
-                        <hr />
+                        <%--<hr />--%>
 
                         <!-- Product Images -->
                         <div class="d-flex gap-2 mb-3">
                             <asp:Repeater ID="rptImages" runat="server">
                                 <ItemTemplate>
                                     <img src='<%# Container.DataItem %>'
-                                         style="width:70px;height:70px;border-radius:10px;object-fit:cover;" />
+                                         style="width:70PX;height:70PX;border-radius:10px;object-fit:cover;" />
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
@@ -58,6 +66,7 @@
                         </div>
 
                     </div>
+                    <hr />
                 </div>
 
             </ItemTemplate>
