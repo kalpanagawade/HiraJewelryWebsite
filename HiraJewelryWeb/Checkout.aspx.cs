@@ -16,19 +16,51 @@ namespace HiraJewelryWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (!IsPostBack)
+            //{
+            //    // Example static values (from session/cart later)
+            //    decimal price = 14272;
+            //    decimal tax = 415.69m;
+
+            //    //lblItemPrice.Text = price.ToString("N2");
+            //    lblTax.Text = tax.ToString("N2");
+            //    lblTax2.Text = tax.ToString("N2");
+            //    lblTotal.Text = (price).ToString("N2");
+            //    if (Request.QueryString["price"] != null)
+            //    {
+            //        lblItemPrice.Text = Request.QueryString["price"];
+            //    }
+            //}
             if (!IsPostBack)
             {
-                // Example static values (from session/cart later)
-                decimal price = 14272;
-                decimal tax = 415.69m;
+                if (Request.QueryString["price"] != null)
+                {
+                    decimal price = Convert.ToDecimal(Request.QueryString["price"]);
 
-                lblItemPrice.Text = price.ToString("N2");
-                lblTax.Text = tax.ToString("N2");
-                lblTax2.Text = tax.ToString("N2");
-                lblTotal.Text = (price).ToString("N2");
+                    decimal goldGSTPercent = 3;   // GST for gold
+                    decimal makingGSTPercent = 5; // if you have making charges
+
+                    decimal goldTax = (price * goldGSTPercent) / 100;
+
+                    // 👉 If you have making charges then use this
+                    decimal makingCharge = 0; // set dynamically if available
+                    decimal makingTax = (makingCharge * makingGSTPercent) / 100;
+
+                    decimal totalTax = goldTax + makingTax;
+                    decimal finalAmount = price + makingCharge + totalTax;
+
+                    lblItemPrice.Text = price.ToString("N2");
+                    lblTax.Text = totalTax.ToString("N2");
+                    lblTax2.Text = totalTax.ToString("N2");
+                    lblTotal.Text = finalAmount.ToString("N2");
+                }
             }
+
+
+
+
         }
-protected void btnPayNow_Click(object sender, EventArgs e)
+        protected void btnPayNow_Click(object sender, EventArgs e)
     {
         if (Session["UserEmail"] == null)
         {
