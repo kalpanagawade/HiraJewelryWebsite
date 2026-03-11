@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -141,8 +142,11 @@ namespace HiraJewelryWeb
 
         protected void btnBuyNow_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Checkout.aspx");
+            string price = lblPrice.Text.Trim();
+
+            Response.Redirect("Checkout.aspx?price=" + Server.UrlEncode(price));
         }
+
 
 
     }
