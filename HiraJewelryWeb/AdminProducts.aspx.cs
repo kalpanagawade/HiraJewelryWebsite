@@ -137,16 +137,17 @@ namespace HiraJewelryWeb
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Products WHERE ProductID=@id", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Products  P inner join Category  C on  C.CategoryName=P.Category WHERE ProductID=@id", con);
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read())
                 {
+                    System.Diagnostics.Debug.WriteLine("Category: " + dr["Category"].ToString());
                     hfProductID.Value = dr["ProductID"].ToString();
                     txtProductName.Text = dr["ProductName"].ToString();
-                    ddlCategory.SelectedValue = dr["Category"].ToString();
+                    ddlCategory.SelectedValue = dr["CategoryID"].ToString();
                     txtDescription.Text = dr["Description"].ToString();
                     txtPrice.Text = dr["Price"].ToString();
                     txtStock.Text = dr["Stock"].ToString();
