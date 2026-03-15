@@ -188,9 +188,10 @@ namespace HiraJewelryWeb
 
                 tran.Commit();
 
-                // 8️⃣ Redirect
-                Response.Redirect("~/Order.aspx");
-            }
+                    // 8️⃣ Redirect
+                    //Response.Redirect("~/Order.aspx");
+                    Response.Write("<script>alert('Order Succsessfully');</script>");
+                }
             catch (Exception ex)
             {
                 tran.Rollback();
